@@ -9,7 +9,10 @@
   "author": "Subhas",
   "license": "ISC",
   "dependencies": {
+    "@babel/standalone": "^7.14.3",
     "bootstrap": "^4.6.0",
-    "jquery": "^3.6.0"
+    "dom": "0.0.3",
+    "jquery": "^3.6.0",
+    "react": "^17.0.2"
   }
 }
