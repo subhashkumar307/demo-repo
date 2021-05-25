@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Reset Button</title>
+        <script>
+            function SubmitClick()
+            {
+                alert("Data Posted to Server");
+            }
+            function ResetClick()
+            {
+                alert("Form will reset");
+            }
+        </script>
+    </head>
+    <body>
+        <form onsubmit="SubmitClick()" onreset="ResetClick()">
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+        </form>
+    </body>
+</html>

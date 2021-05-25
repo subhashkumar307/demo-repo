@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>jQuery</title>
+        <script src="../node_modules/jquery/dist/jquery.js"></script>
+        <script>
+            $(function()
+            {
+                var username = prompt("Enter Name");
+                $("h2").html(`Hello ! ${username} Welcome to jQuery`);
+                $("#p1").html("jQuery is a library");
+                $(".div1").html("<i><b>Write Less - Do More</i></b>");
+               
+            })
+            $(function(){
+                $("#btnShow").click(function(){
+                    $("#msg").html("Welcome to jQuery");
+                })
+            })
+        </script>
+    </head>
+    <body>
+        <h2></h2>
+        <p id="p1"></p>
+        <div class="div1"></div>
+        <button id="btnShow">Show Message</button>
+        <h2 id="msg"></h2>
+    </body>
+</html>

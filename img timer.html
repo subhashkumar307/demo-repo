@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Animation Direction </title>
+        <style>
+            .container
+            {
+                overflow: hidden;
+                height: 400px;
+            }
+            @keyframes slideln
+            {
+                from
+                {
+                    margin-left: 100%;
+                    transform: rotate(120deg);
+                }
+                to
+                {
+                    margin-left: 0%;
+                    transform: rotate(0deg);
+                }
+            }
+            img
+            {
+                width: 20%;
+                height: 70%;
+                animation-name: slideln;
+                animation-duration: 5s;
+                animation-iteration-count: infinite;
+                animation-direction: alternate;
+                animation-delay: 5s;
+                animation-timing-function: ease;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <img src="Images/pic1.png" width="100px" height="100px">
+        </div>
+    </body>
+</html>

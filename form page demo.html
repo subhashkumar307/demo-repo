@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Form Demo</title>
+    </head>
+    <body>
+        <form align="center">
+            Google
+            <input type="text" list="terms">
+            <datalist id="terms">
+                <option>HTML Tutorial</option>
+                <option>CSS Tutorial</option>
+                <option>JavaScript</option>
+            </datalist>
+        </form>
+        <form>
+            Departure:-
+            <input type="date" name="txtdate">
+            <input type="date" min="2021-03-16" value="2021-03-22"  max="2021-04-15" name="txtDate">
+            <button>Submit</button>
+        </form> 
+        <form>   
+            Price:-
+            <input type="number" min="1.5" max="10" step="0.5">
+            <button>Submit</button>
+            Age:-
+            <input type="number" min="100" max="1000" step="50">
+            <button>Submit</button>
+            <input type="range" min="1" max="100" step="5">
+            <button>Submit</button>
+        </form>
+        <form>
+            Email:- 
+            <input type="email" name="txtEmail">
+            <button>Submit</button>
+        </form>
+        <form>
+            Website Address:-
+            <input type="url" name="url">
+            <button>Submit</button>
+        </form>
+        <form>
+            Pic Color:- 
+            <input type="color" name="txtColor">
+            <button>Submit</button>
+        </form>
+        <form>
+            Upload Photo:- 
+            <input type="file" name="txtFiles">
+            <button>Submit</button>
+        </form>
+        <form>
+            Your Password:- 
+            <input type="password" name="txtPassword">
+            <button>Submit</button>
+        </form>
+        <form>
+            <input type="radio"> Male
+            <input type="radio"> Female
+            <button>Submit</button>
+        </form>
+    </body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Intra Document Links </title>
+        <style>
+            .box
+            {
+                padding: 5px;
+                border: 5px solid black;
+                background-color: tomato;
+                color: white;
+                margin-top: 20px;
+            }
+            .box:target
+            {
+                background-color: teal;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <ul>
+                <li><a href="#html">HTML</a></li>
+                <li><a href="#css">CSS</a></li>
+                <li><a href="#js">JavaScript</a></li>
+            </ul>
+        </header>
+        <section>
+            <div id="html" class="box">
+                <h2>HTML</h2>
+                <p> HTML (Hypertext Markup Language) is the code that is used to structure a web page and 
+                    its content. For example, content could be structured within a set of paragraphs, a list 
+                    of bulleted points, or using images and data tables.
+                </p>
+            </div>
+            <div id="css" class="box">
+                <h2>CSS</h2>
+                <p>CSS is the acronym of “Cascading Style Sheets”. CSS is a computer language for laying out
+                    and structuring web pages (HTML or XML). This language contains coding elements and is
+                    composed of these “cascading style sheets” which are equally called CSS files.
+                </p>
+            </div>
+            <div id="js" class="box">
+                <h2>JavaScript</h2>
+                <p> JavaScript is a text-based programming language used both on the client-side and 
+                    server-side that allows you to make web pages interactive. Where HTML and 
+                    CSS are languages that give structure and style to web pages, JavaScript gives
+                     web pages interactive elements that engage a user.
+                </p>
+            </div>
+        </section>
+    </body>
+</html>

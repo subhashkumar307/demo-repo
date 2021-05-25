@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>jQuery Demo</title>
+        <script src="../node_modules/jquery/dist/jquery.js"></script>
+        <script>
+            $(function(){
+                $("#btnSubmit").click(function(){
+                    $("#msg").html(`Hello ! ${$("#txtName").val()}`);
+                })
+            })
+        </script>
+    </head>
+    <body>
+        Name: <input type="text" id="txtName"> <button id="btnSubmit">Submit</button>
+        <h2 id="msg" align="center"></h2>
+    </body>
+</html>

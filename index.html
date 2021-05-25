@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Toolbar </title>
+        <link rel="stylesheet" href="Fonts/css/all.css">
+        <style>
+            nav
+            {
+                width: 50px;
+                background-color: teal;
+                color: white;
+                padding: 20px;
+                font-size: 30px;
+            }
+            li span
+            {
+                display: none;
+            }
+            ul
+            {
+                margin-left: -20px;
+            }
+            li 
+            {
+                margin-bottom: 30px;
+            }
+            li:hover
+            {
+                background-color: black;
+            }
+            @media screen and (orientation:landscape)
+             {
+                 nav
+                 {
+                     display: flex;
+                     width: 100%;
+                 }
+                 li 
+                 {
+                     margin-right: 30px;
+                 }
+                 li span 
+                 {
+                     display: inline;
+                 }
+                 
+            }
+        </style>
+    </head>
+    <body>
+        <nav>
+            <ul>
+                <li class="fa fa-home"><span> Home </span></li>
+                <li class="fa fa-envelope"><span> Contect</span></li>
+                <li class="fa fa-user"><span> Login</span> </li>
+                <li class="fa fa-globe"><span> Network</span></li>
+            </ul>
+        </nav>
+    </body>
+</html>

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Welcome JavaScript</h2>
+    <script>
+        let a;
+        a = 'Subhash'
+        console.log(a)
+        a = undefined
+        console.log(a)
+
+        percent = 80;
+        console.log(percent);
+        percent = 20;
+        console.log(percent);
+
+        //Array using Array Constructor
+        const courses = new Array('HTML', 'CSS', 'Bootstrap', 'JavaScript');
+        console.log(courses);
+        console.log('The valus are: ', courses[0]+ ',' + courses[2]);
+
+        //2 Using []
+        const subjects = ['DBMS', 'Java', 'C', 'C++', 'Data Structures', 501, null];
+        console.log(subjects);
+        console.log(subjects[2]);
+        console.log(subjects[5]);
+
+        //Objects
+        const user =
+        {
+            name: 'Subhash Kumar',
+            age: 24,
+            fav_colors: ['Blue', 'Red','Green','Yellow'],
+            designation: 'SDE',
+            company: 'Apple',
+            address: {
+                street: 'Street-2',
+                area: 'Hyderabad',
+                state: 'Andhra Pradesh',
+                country: 'India'
+            }
+        }
+        console.log(user);
+        console.log(user.address.country);
+        console.log(user.company);
+
+        //Array of Objects
+        const students = [
+            {
+                stu_id: 193,
+                designation: 'MCA',
+                collage: 'VIT',
+                yearsOfExp: 2,
+                skills: ['C', 'C++', 'Java', 'HTML', 'CSS'],
+                location: {
+                    collageLocation: 'Chennai',
+                    pin: 50002
+                }
+
+            },
+            {
+                stu_id: 204,
+                designation: 'BT',
+                collage: 'BIT',
+                yearsOfExp: 3,
+                skills: ['C', 'C++', 'Java', 'Java', 'Python'],
+                location: {
+                    collageLocation: 'Mumbai',
+                    pin: 40025
+                }
+
+            },
+            {
+                stu_id: 205,
+                designation: 'SDE',
+                collage: 'NIT',
+                yearsOfExp: 5,
+                skills: ['C', 'C++', 'Java', 'JS', 'Swift'],
+                location: {
+                    collageLocation: 'Banglore',
+                    pin: 84620
+                }
+
+            }
+        ]
+        console.log('The length of the array is ${students.length}');
+        console.log(students);
+        console.log(students[2].location.collageLocation);
+        console.log(students[0]);
+        console.log(students[0].skills[0],students[0].skills[1], students[0].skills[2]);
+        
+        //Conditionals
+            if(11 == '11')
+            {
+                console.log(true);
+            } else {
+                console.log(false);
+            }
+
+            //if, else, else-if
+            const age = 31
+            //Let
+            if(age > 30) {
+                let temp = 'temp'
+                console.log(temp);
+                temp = 'New Temp'
+                console.log(temp);
+                console.log(age)
+            } else {
+                age = age - 10
+            }
+
+            //Var
+            if(age > 30)
+            {
+                var temp = 'temp'
+                console.log(temp);
+                temp = 'New Temp'
+                console.log(temp);
+                console.log(age);
+            } else {
+                age = age - 10
+            }
+
+            //Const
+            if(age > 30)
+            {
+                const temp = 'temp'
+                console.log(temp);
+                //temp = 'New Temp'
+                console.log(temp);
+                console.log(age);
+            } else {
+                age = age - 10
+            }
+            //console.log(temp);
+
+            if(age > 18) {
+                console.log('Age is greater then 18');
+            } else {
+                console.log('Age is less than 18');
+            }
+
+            //Loops
+            //for-loop
+            for(let i = 0; i < 10; i++)
+            {
+                console.log(`The value of i is ${i}`);
+            }
+
+            //While
+            let i = 1
+            while(i <= 10)
+            {
+                console.log(`While Loop : ${i}`);
+                i+=2
+            }
+
+            const todos = [
+                {
+                    id: 1,
+                    task: 'Complete the assignment',
+                    isCompleted: false
+                },
+                {
+                    id: 2,
+                    task: 'Take my dog out of walk',
+                    isCompleted: false,
+                },
+                {
+                    id: 3,
+                    task: 'Eat Lunch',
+                    isCompleted: true
+                }
+            ]
+            for(let i = 0; i < todos.length; i++)
+            {
+                console.log(todos[i].isCompleted);
+            }
+
+            for(let todo of todos)
+            {
+                if(todo.isCompleted === true)
+                {
+                    console.log(todo.task);
+                }
+                console.log(todo);
+            }
+    </script>
+</body>
+</html>

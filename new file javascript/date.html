@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Time</title>
+        <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+        <script>
+            var now;
+            function ShowTime()
+            {
+                now = new Date();
+                document.getElementById("lblTime").innerHTML = now.toLocaleTimeString();
+            }
+            function bodyload()
+            {
+                now = new Date();
+                document.getElementById("lblDate").innerHTML = now.toDateString();
+                setInterval(ShowTime,1000);
+            }
+        </script>
+    </head>
+    <body onload="bodyload()" class="container-fluid">
+        <div class="btn-toolbar bg-danger mt-4 justify-content-between">
+            <div class="btn-group">
+                <button>Home</button>
+                <button>About</button>
+            </div>
+            <div class="btn-group">
+                <button class="btn btn-danger">
+                    <span id="lblDate"></span>
+                    <span id="lblTime"></span>
+                </button>
+            </div>
+        </div>
+    </body>
+</html>

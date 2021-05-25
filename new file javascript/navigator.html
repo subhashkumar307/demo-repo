@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Location</title>
+        <script>
+            function GetDetails()
+            {
+                document.getElementById("host").innerHTML = location.host;
+                document.getElementById("port").innerHTML = location.port;
+                document.getElementById("protocol").innerHTML = location.protocol;
+                document.getElementById("path").innerHTML = location.pathname;
+                document.getElementById("url").innerHTML = location.href;
+            }
+        </script>
+    </head>
+    <body>
+        <button onclick="GetDetails()">Get Location Details</button>
+        <dl>
+            <dt>Server | IP</dt>
+            <dd id="host"></dd>
+            <dt>Port</dt>
+            <dd id="port"></dd>
+            <dt>Protocol</dt>
+            <dd id="protocol"></dd>
+            <dt>Path</dt>
+            <dd id="path"></dd>
+            <dt>URL</dt>
+            <dd id="url"></dd>
+        </dl>
+    </body>
+</html>

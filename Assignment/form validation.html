@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../Fonts/css/all.css">
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <title>Form Validation</title>
+    <style>
+        body
+        {
+            padding: 10px 50px;
+        }
+        .formerror
+        {
+            color: red;
+        }
+        .form-group input
+        {
+            width: 50%;
+            padding: 5px 5px;
+            border: 1px solid blueviolet;
+            margin: 14px;
+            border-radius: 4px;
+            font-size: 15px;
+        }
+        label
+        {
+            font-size: 25px;
+        }
+        .but
+        {
+            border-radius: 8px;
+            width: 100px;
+            height: 50px;
+            font-size: 25px;
+            margin: 22px 20px;
+        }
+    </style>
+<body>
+    <h1>Welcome to form Validation</h1>
+    <form>
+        <div class="form-group" id="name">
+            <label>Name:</label>
+            <input type="text" name="fname" class="form-group-control" id="name"><span class="formerror"><b></b></span>
+        </div>
+        <div class="form-group" id="email">
+            <label>Email:</label>
+            <input type="text" name="femail" class="form-group-control" id="name"><span class="formerror"><b></b></span>
+        </div>
+        <div class="form-group" id="phone">
+            <label>Phone:</label>
+            <input type="phone" name="fphone" class="form-group-control" id="name"><span class="formerror"><b></b></span>
+        </div>
+        <div class="form-group" id="pass">
+            <label>Password:</label>
+            <input type="password" name="fpass" class="form-group-control" id="name"><span class="formerror"><b></b></span>
+        </div>
+        <div class="form-group" id="cpass">
+            <label>Conform Password:</label>
+            <input type="password" name="fcpass" class="form-group-control" id="name"><span class="formerror"><b></b></span>
+        </div>
+        <input class="but" type="submit" value="Submit">
+    </form>
+</body>
+</html>

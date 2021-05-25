@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown Button</title>
+    <style>
+        .container ul
+        {
+            list-style: none;
+        }
+        .container ul li
+        {
+            background-color: rgb(49, 13, 133);
+            color: white;
+            width: 150px;
+            border: 1px solid white;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            float: left;
+            font-size: 18px;
+            position: relative;
+        }
+        .container ul li:hover
+        {
+            background-color: rgb(71, 223, 58);
+        }
+        *
+        {
+            margin: 0px;
+            padding: 0px;
+        }
+        .container ul ul
+        {
+            display: none;
+        }
+        .container ul li:hover > ul
+        {
+            display: block;
+        }
+        .container ul ul ul
+        {
+            margin-left: 150px;
+            top: 0px;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Entertainement
+                <ul>
+                    <li>Hollywood</li>
+                    <li>Bollywood
+                        <ul>
+                            <li>WAR</li>
+                            <li>BAAGHI3</li>
+                            <li>Roohi</li>
+                        </ul>
+                    </li>
+                    <li>Lollywood</li>
+                </ul>
+            </li>
+            <li>Contact</li>
+            <li>Information
+                <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>Bootstrap</li>
+                    <li>JavaScript</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    
+</body>
+</html>

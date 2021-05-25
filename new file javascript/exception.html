@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Login Page</title>
+        <link rel="stylesheet" href="../Fonts/css/all.css">
+        <style>
+            dd
+            {
+                margin-bottom: 20px;
+            }
+        </style>
+        <script>
+            function GenerateCode()
+            {
+                var a = Math.random() * 10;
+                var b = Math.random() * 10;
+                var c = Math.random() * 10;
+                var d = Math.random() * 10;
+                var e = Math.random() * 10;
+                var f = Math.random() * 10;
+                var code = `${Math.round(a)} ${Math.round(b)} ${Math.round(c)} ${Math.round(d)} ${Math.round(e)} ${Math.round(f)}`
+                document.getElementById("code").innerHTML = code;
+            }
+            function bodyload()
+            {
+                GenerateCode();
+            }
+            function RefreshClick()
+            {
+                GenerateCode();
+            }
+        </script>
+    </head>
+    <body onload="bodyload()">
+        <h2>User Login</h2>
+        <dl>
+            <dt>User Name</dt>
+            <dd><input type="text"></dd>
+            <dt>Password</dt>
+            <dd><input type="password"></dd>
+            <dt>Verify Code <button onclick="RefreshClick()"><span class="fa fa-sync"></span></button></dt>
+            <dd id="code"></dd>
+        </dl>
+        <button>Login</button>
+    </body>
+</html>

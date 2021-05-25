@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Meter</title>
+        <style>
+            .meter
+            {
+                width: 100px;
+                height: 300px;
+                transform: rotate(30deg);
+            }
+        </style>
+    </head>
+    <body>
+        <fieldset class="meter">
+            <legend>Meter Demo</legend>
+            <dl>
+                <dt>Normal</dt>
+                <dd>
+                    <meter></meter>
+                </dd>
+                <dt>Strong Password</dt>
+                <dd>
+                    <meter min="1" max="100" value="100"></meter>
+                </dd>
+                <dt>Strong 40%</dt>
+                <dd>
+                    <meter min="1" max="100" value="40"></meter>
+                </dd>
+                <dt>Weak Password</dt>
+                <dd>
+                    <meter min="1" max="100" low="40" high="80" value="100"></meter>
+                </dd>
+                <dt>Poor Password</dt>
+                <dd>
+                    <meter min="1" max="100" low="60" high="80" value="100"></meter>
+                </dd>
+            </dl>
+        </fieldset>
+    </body>
+</html>

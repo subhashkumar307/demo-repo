@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>EMI Calculator</title>
+    </head>
+    <body>
+        <div>
+            <div class="btc col-xs-6 col-sm-6 col-md-5 col-lg-4 calc-fullWidth">
+                <div>
+                    <div class="mT5 pull-left">
+                        Amount You Need
+                    </div>
+                    <div class="pull-left mL5">
+                        <span class="rupeebtc">₹</span>
+                        <!--<input type="text" class="form-control">-->
+                        <input class="form-control amtinput ng-pristine ng-untouched ng-valid ng-not-empty ng-valid-maxlength" ng-class="mainctrl.newCarErr;" type="text" ng-model="mainctrl.newCar" maxlength="8" size="20" ng-value="100000" id="amt" value="100000" onkeyup="return event.charCode >= 48 && event.charCode <= 57" ng-change="mainctrl.newCarSlider = mainctrl.newCar;mainctrl.reset();mainctrl.changeSlider();" ng-blur="mainctrl.showAmtError();mainctrl.yourAgeValidation();mainctrl.removeToolError($event);" ng-focus="mainctrl.checkForError($event);" onkeypress="return ((event.charCode >= 48 && event.charCode <= 57) || event.charCode==46 || event.charCode == 8 || event.charCode == 0)">
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="rge">
+                <input type="range" class="rangeamt sliderspace ng-pristine ng-untouched ng-valid ng-not-empty" min="50000" max="4000000" step="10000" ng-value="100000" ng-model="mainctrl.newCarSlider" ng-change="mainctrl.newCar = mainctrl.newCarSlider;mainctrl.reset();mainctrl.showAmtError();" data-rangeslider="" value="100000" style="position: absolute; width: 1px; height: 1px; overflow: hidden; opacity: 0;">
+                
+                    <div class="rangeslider rangeslider--horizontal" id="js-rangeslider-0">
+                        <div class="rangeslider__fill" style="width: 12.4051px;"></div>
+                        <div class="rangeslider__handle" style="left: 2.40506px;"></div>
+                    </div>
+            </div>
+            <div class="emislider4 rangeAmtVal ">
+                <span class="pull-left ng-binding">₹50,000</span>
+                 <span class="pull-right text-right ng-binding">₹40,00,000</span>
+            </div>
+        </div>
+    </body>
+</html>

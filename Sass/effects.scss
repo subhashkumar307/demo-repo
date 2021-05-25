@@ -1,0 +1,11 @@
+$border: 2px solid darkcyan;
+$bg: lightcyan;
+
+.container
+{
+    width: 100%;
+    background-color: $bg;
+    border: $border;
+    $padding: 20px;
+    padding: $padding;
+}

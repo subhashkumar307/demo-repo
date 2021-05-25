@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Z index</title>
+        <style>
+            .box-1
+            {
+                border: 2px solid red;
+                background-color: yellow;
+                width: 400px;
+                height: 200px;
+                position: absolute;
+                z-index: 0;
+            }
+            .box-2
+            {
+                border: 2px solid black;
+                background: blue;
+                width: 50px;
+                height: 300px;
+                position: absolute;
+                top: 0px;
+                left: 100px;
+                z-index: 1;
+            }
+            .box-3
+            {
+                border: chartreuse 2px solid;
+                background: cyan;
+                width: 100px;
+                height: 300px;
+                position: absolute;
+                top: 10px;
+                left: 150px;
+                z-index: 3;
+            }
+            .box-4
+            {
+                border: 2px solid crimson;
+                background-color: darkmagenta;
+                width: 150px;
+                height: 150px;
+                position: absolute;
+                top: 30px;
+                left: 50px;
+                z-index: 2;
+            }
+            .box-5
+            {
+                border: darkslategray 2px solid;
+                background-color: forestgreen;
+                width: 200px;
+                height: 200px;
+                position: absolute;
+                top: 50px;
+                left: 50px;
+                z-index: 4;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="box-1">
+            box-1
+        </div>
+        <div class="box-2">
+            box-2
+        </div>
+        <div class="box-3">
+            box-3
+        </div>
+        <div class="box-4">
+            box-4
+        </div>
+        <div class="box-5">
+            box-5
+        </div>
+    </body>
+</html>

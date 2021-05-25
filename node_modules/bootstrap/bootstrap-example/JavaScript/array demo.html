@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Array Demo</title>
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="/Fonts/css/all.css">
+    <script>
+        var products = [
+            {Name: "Shoes", Price: 2500.00, Photo: "../Images/pic1.png"},
+            {Name: "Temple", Price: 5200.00, Photo: "../Images/pic2.png"},
+            {Name: "Laptop", Price: 32500.00, Photo: "../Images/pic3.png"},
+            {Name: "Covered", Price: 4300.00, Photo: "../Images/pic4.png"},
+            {Name: "Sony", Price: 5500.00, Photo: "../Images/sony.png"},
+
+        ];
+        function ShowDetails(index)
+        {
+            document.getElementById("lblName").innerHTML = products[index].Name;
+            document.getElementById("lblPrice").innerHTML = "&#8377;" +products[index].Price;
+            document.getElementById("pic").src=products[index].Photo;
+        }
+        function bodyload()
+        {
+            ShowDetails(0);
+        }
+        var count = 0;
+        function NextClick()
+        {
+            if(count<products.length-1)
+            {
+                count++;
+                ShowDetails(count);
+                document.getElementById("optSlider").value=count;
+            }
+        }
+        function PreviousClick()
+        {
+            if(count>0)
+            {
+                count--;
+                ShowDetails(count);
+                document.getElementById("optSlider").value=count;
+            }
+        }
+        function SliderChanged()
+        {
+            var sliderValue = document.getElementById("optSlider").value;
+            ShowDetails(sliderValue);
+        }
+    </script>
+</head>
+
+<body onload="bodyload()" class="container-fluid">
+    <h1 class="text-primary text-center">Product Details</h1>
+    <div class="row">
+        <div class="col-2">
+            <button onclick="PreviousClick()" class="btn btn-outline-danger">
+                <span class="fa fa-chevron-circle-left"></span>
+            </button>
+        </div>
+        <div class="col-8 text-center">
+            <div class="card">
+                <div class="card-header">
+                    <h3 id="lblName"></h3>
+                </div>
+                <div class="card-body">
+                    <img id="pic" width="80%" height="350">
+                    <p id="lblPrice"></p>
+                </div>
+                <div class="card-footer">
+                    <input onchange="SliderChanged()" id="optSlider" type="range" min="0" max="4" value="0">
+                </div>
+            </div>
+        </div>
+        <div class="col-2">
+            <button onclick="NextClick()" class="btn btn-outline-danger">
+                <span class="fa fa-chevron-circle-right"></span>
+            </button>
+        </div>
+    </div>
+</body>
+
+</html>

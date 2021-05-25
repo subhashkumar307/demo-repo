@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hotal Online Form</title>
+        <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+        <script src="../node_modules/jquery/dist/jquery.js"></script>
+        <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+        <style>
+            body
+            {
+                background-color: rgba(23, 101, 138, 0.61);
+            }
+        </style>
+        <script>
+            function OrderClick()
+            {
+                document.getElementById("lblName").innerHTML = document.getElementById("txtName").value;
+                document.getElementById("lblMobile").innerHTML = document.getElementById("txtMobile").value;
+                document.getElementById("lblDate").innerHTML = document.getElementById("txtDate").value;
+                document.getElementById("lblDays").innerHTML = document.getElementById("txtDays").value;
+                document.getElementById("lblPersons").innerHTML = document.getElementById("txtPersons").value;
+               
+                var optDelux = document.getElementById("optDelux");
+                var optSuite = document.getElementById("optSuite");
+
+                var optAC = document.getElementById("optAC");
+                var optLocker = document.getElementById("optLocker");
+
+
+                var roomCost=0;
+                var roomName="";
+
+                var adOnCost=0;
+                var adOnName="";
+
+                if(optDelux.checked)
+                {
+                    roomCost = 2500;
+                    roomName = optDelux.value;
+                }
+                if(optSuite.checked)
+                {
+                    roomCost = 4000;
+                    roomName = optSuite.value;
+                }
+                if(optAC.checked)
+                {
+                    adOnCost = 1000;
+                    roomCost = roomCost + adOnCost;
+                    adOnName += optAC.value + "<br>";
+                }
+                if(optLocker.checked)
+                {
+                    adOnCost = 300;
+                    roomCost = roomCost + adOnCost;
+                    adOnName += optLocker.value + "<br>";
+                }
+                document.getElementById("lblRoom").innerHTML = roomName;
+                document.getElementById("lblAdon").innerHTML = adOnName;
+                document.getElementById("lblAmount").innerHTML = "&#8377;" + roomCost;
+            }
+        </script>
+    </head>
+    <body class="container-fluid">
+        <h2 style="text-align: center;">Hotal Registration Form</h2>
+        <header class="mt-3">
+            <img src="../Images/hotal banner.jpg" width="100%" height="300px">
+        </header>
+        <section class="mt-2">
+            <div class="accordion p-4" id="hotalform">
+                <!--Customer Info-->
+                <div class="card">
+                    <div class="card-header">
+                        <button data-toggle="collapse" data-target="#customerCollapse" class="btn btn-primary btn-block">Customer Info</button>
+                    </div>
+                    <div class="collapse show" id="customerCollapse" data-parent="#hotalform">
+                        <dl class="p-3">
+                            <dt>Customer Name</dt>
+                            <dd>
+                                <input type="text" id="txtName" class="form-control">
+                            </dd>
+                            <dt>Mobile Number</dt>
+                            <dd>
+                                <input type="text" id="txtMobile" class="form-control">
+                            </dd>
+                            <dt>Check In Date</dt>
+                            <dd>
+                                <input type="date" id="txtDate" class="form-control">
+                            </dd>
+                            <dt>Total No of Days</dt>
+                            <dd>
+                                <input type="number" id="txtDays" class="form-control">
+                            </dd>
+                            <dt>Total No of Persons</dt>
+                            <dd>
+                                <input type="number" id="txtPersons" class="form-control">
+                            </dd>
+                        </dl>
+                    </div>
+                </div>
+                <!--Room Info-->
+                <div class="card">
+                    <div class="card-header">
+                        <button data-target="#roomCollapse" data-toggle="collapse" class="btn btn-primary btn-block">Select Room Type</button>
+                    </div>
+                    <div class="collapse" id="roomCollapse" data-parent="#hotalform">
+                        <div class="row">
+                            <div class="col text-center p-3">
+                                <div class="card">
+                                    
+                                    <div class="card-header">
+                                        <img class="card-img-top" src="../Images/delux room.jpg" height="240">
+                                       <h3>Delux Room</h3>
+                                    </div>
+                                    <div class="card-body">
+                                        <input type="radio" id="optDelux" name="Room" value="Delux Room"> &#8377; 2500/- 
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col text-center p-3">
+                                <div class="card">
+                                   
+                                    <div class="card-header">
+                                        <img class="card-img-top" src="../Images/suite room1.jpg" height="240">
+                                       <h3>Suite Room</h3>
+                                    </div>
+                                    <div class="card-body">
+                                        <input type="radio" id="optSuite" name="Room" value="Suite Room"> &#8377; 4000/- 
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Ad-ONs -->
+                <div class="card">
+                    <div class="card-header">
+                        <button data-target="#adonCollapse" data-toggle="collapse" class="btn btn-primary btn-block">Select Amenities</button>
+                    </div>
+                    <div class="collapse" id="adonCollapse" data-parent="#hotalform">
+                        <div class="row">
+                            <div class="col text-center p-3">
+                                <div class="card">
+                                    <img class="card-img-top" src="../Images/ac room.jpg" height="250">
+                                    <div class="card-header">
+                                       <h3>A/C</h3>
+                                    </div>
+                                    <div class="card-body">
+                                        <input type="checkbox" id="optAC" value="AC Room"> &#8377; 1000/- 
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col text-center p-3">
+                                <div class="card">
+                                    <img class="card-img-top" src="../Images/locker img.jpg" height="250">
+                                    <div class="card-header">
+                                       <h3>Locker</h3>
+                                    </div>
+                                    <div class="card-body">
+                                        <input type="checkbox" id="optLocker" value="Locker Room"> &#8377; 300/- 
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <button data-target="#advanceCollapse" data-toggle="collapse" class="btn btn-primary btn-block">Adavance Amount</button>
+                    </div>
+                    <div class="collapse" id="advanceCollapse" data-parent="#hotalform">
+                        <dl class="p-3">
+                            <dt>Advance Amount</dt>
+                            <dd>
+                                <input type="number" id="txtAdvance" class="form-control">
+                            </dd>
+                        </dl>
+                    </div>
+                </div>
+                <div class="p-4">
+                    <button onclick="OrderClick()" data-toggle="modal" data-target="#summary" class="btn btn-warning btn-block">Register</button>
+                </div>
+                <div class="modal fade" id="summary">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h3 class="btn btn-success btn-block text-center">Bill Summary</h3>
+                            </div>
+                            <div class="modal-body">
+                                <table class="table table-hover">
+                                    <tr>
+                                        <td>Customer Name</td>
+                                        <td id="lblName"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Mobile</td>
+                                        <td id="lblMobile"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Check In Date</td>
+                                        <td id="lblDate"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Total No of Days</td>
+                                        <td id="lblDays"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Total No of Persons</td>
+                                        <td id="lblPersons"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Select Room Type</td>
+                                        <td id="lblRoom"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Amenities</td>
+                                        <td id="lblAdon"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Advance Amount</td>
+                                        <td id="lblAdv"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Total Amount</td>
+                                        <td id="lblAmount"></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="modal-footer">
+                                <button class="btn btn-primary" data-dimiss="modal">OK</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </body>
+</html>

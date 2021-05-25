@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Message Type</title>
+        <script>
+            function msg1()
+            {
+                document.getElementById("msg").innerHTML="Hello !";
+            }
+            function msg2()
+            {
+                document.getElementById("msg").innerHTML="How are you?";
+            }
+            function msg3()
+            {
+                document.getElementById("msg").innerHTML="Welcome to Javascript";
+            }
+            var m1;
+            var m2;
+            var m3;
+            function bodyload()
+            {
+                //msg1();
+                //msg2();
+                //msg3();
+                m1 =  setTimeout(msg1, 2000);
+                m2 =  setTimeout(msg2, 4000);
+                m3 =  setTimeout(msg3, 6000);
+            }
+            function CancelMsg2()
+            {
+                clearTimeout(m2);
+            }
+        </script>
+    </head>
+    <body onload="bodyload()">
+        <h1 id="msg" align="center"></h1>
+        <button onclick="CancelMsg2()">Cancel Msg2</button>
+    </body>
+</html>

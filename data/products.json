@@ -1,0 +1,12 @@
+[
+    {
+        "Name": "Samsung TV",
+        "Price": 40000.30,
+        "Stock": true
+    },
+    {
+        "Name": "Nike Casuals",
+        "Price": 4500.00,
+        "Stock": false
+    }
+]

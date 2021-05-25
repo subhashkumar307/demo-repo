@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Function Type</title>
+        <script>
+            //function fullName(fname = "Subhash", lname = "Kuamr")
+            //{
+                //var a = fname + " " + lname;
+                //return a;
+            //}
+            //var fn= fullName("Ram", "Kumar");
+            //document.write(fn);
+
+            function sum(Eng, Math, Sci,)
+            {
+                var s = Eng + Math + Sci;
+                return s;
+            }
+
+            function percentage(tt)
+            {
+                var per = tt/300 * 100;
+                document.write(per ,"<br>");
+            }
+
+            var total = sum(70,65,75); 
+            percentage(total);
+            //document.write(total);
+
+            var a = "Subhash Kumar"; // Global Variable:- Global variable is call the varable again to again.
+            function hello()
+            {
+                //var a = "Subhash Kumar"; //Local Variable:- Local variable is only function call is work.
+                document.write(a);
+            }
+            hello();
+            hello();
+
+        </script>
+    </head>
+</html>

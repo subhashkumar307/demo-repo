@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Regular Expression</title>
+        <style>
+            meter
+            {
+                width: 160px;
+            }
+        </style>
+        <script>
+            function VerifyPassword()
+            {
+                var txtPwd = document.getElementById("txtPwd").value;
+                var lblMsg = document.getElementById("lblMsg");
+
+                var regExp = /(?=.*[A-Z])\w{4,15}/;
+
+                function ShowGrade(min, max, value, low, high)
+                {
+                    var grade = document.getElementById("grade");
+                    grade.min = min;
+                    grade.max = max;
+                    grade.value = value;
+                    grade.low = low;
+                    grade.high = high;
+                }
+                if(txtPwd.match(regExp))
+                {
+                    lblMsg.innerHTML = "Strong Password" .fontcolor('green');
+                    ShowGrade(1,100,100,0,0);
+                }
+                else
+                {
+                    if(txtPwd.length<4) {
+                        lblMsg.innerHTML = "Poor Password" .fontcolor('red');
+                        ShowGrade(1,100,20,0,0);
+                    } else {
+                        lblMsg.innerHTML = "Weak Password" .fontcolor('gold');
+                        ShowGrade(1,100,80,0.0);
+                    }
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <h2>Register</h2>
+        <dl>
+            <dt>Password</dt>
+            <dd>
+                <input onkeyup="VerifyPassword()" type="password" id="txtPwd">
+            </dd>
+            <dd>
+                <meter id="grade"></meter>
+            </dd>
+            <dd id="lblMsg">
+
+            </dd>
+        </dl>
+    </body>
+</html>

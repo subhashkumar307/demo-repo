@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document jQuery</title>
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script>
+        $(document).ready(function(){
+            var a = $('#text1').html();
+            console.log(a);
+
+            var b = $('#text2').html();
+            console.log(b);
+           // var c = $('#btnbutton').html();
+            //alert('Sucessfully Submit');
+
+            $('#list').css('color', 'red'); 
+            $('#list').css('border', '2px solid green');
+            $('#list li').css('border', '1px solid blue');
+            $('#list li').css('list-style', 'none');
+            $('#list').css('background-color', 'yellow');
+            $('.item').css('color', 'darkgreen');  
+            $('.item').css('background-color', 'white');
+            $('.item2').css('background-color', 'blue');
+            $('ul li:eq(2)').css('background-color', 'orange');
+            $('ul li:eq(2)').css('color', 'black');
+            $('ul li:eq(2)').css('font-weight', 'bold');
+        });
+    </script>
+    <style>
+        .box
+        {
+            width: 100;
+            height: 200;
+            border: 2px solid red;
+            margin: 20px;
+            background-color: darkgreen;
+            color: white;
+            
+        }
+        .container
+        {
+            display: flex;
+        }
+    </style>
+</head>
+<body >
+    <div class="container">
+    <div id="text1" class="box">
+        <h2>Box-1</h2>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime sit obcaecati perspiciatis 
+            in impedit delectus quia nam qui dolorem, id consectetur tempora eaque itaque blanditiis ipsam. 
+             consectetur quaerat tempore.
+        </p>
+    </div>
+    <div id="text2" class="box">
+        <h2>Box-2</h2>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum ipsum animi quam perspiciatis vero 
+            molestiae fugit architecto distinctio rem. Nobis libero exercitationem optio amet ea tempora quas 
+            dolorum fugit repellendus.
+        </p>
+    </div>
+    </div>
+
+    <ul id="list">
+        <li class="item">Mango</li>
+        <li>Banana</li>
+        <li>Apple</li>
+        <li>Orange</li>
+        <li class="item2">Tomato</li>
+    </ul>
+    <!--<button id="btnsubmit">Submit</button>-->
+</body>
+</html>

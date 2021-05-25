@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Responsive Toolbar </title>
+        <link rel="stylesheet" href="Fonts/css/all.css">
+        <style>
+            nav
+            {
+                width: 90px;
+                background-color: brown;
+                color: white;
+                padding: 20px;
+                font-size: 40px;
+            }
+            #titleText
+            {
+                display: none;
+            }
+            @media  screen and (orientation: landscape)
+            {
+                nav 
+                {
+                    display: flex;
+                    width: 100%;
+                    background-color: teal;
+                    color: white;
+                }
+                nav div
+                {
+                    margin-left: 30px;
+                }
+                #titleText
+                {
+                    display: inline;
+                }                
+            }
+            .active
+            {
+                background-color: black;
+            }
+            nav div:hover
+            {
+                background-color: green;
+            }
+        </style>
+    </head>
+    <body>
+        <nav>
+            <div class="active"><span class="fa fa-home"></span> <span id="titleText"> Home</span></div>
+            <div><span class="fa fa-envelope"></span> <span id="titleText"> Contact</span></div>
+            <div><span class="fa fa-user"></span> <span id="titleText"> Login</span></div>
+            <div><span class="fa fa-globe"></span> <span id="titleText"> Network</span></div>
+        </nav>
+    </body>
+</html>

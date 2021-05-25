@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Slide Show</title>
+        <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+        <link rel="stylesheet" href="../Fonts/css/all.css">
+        <script>
+            var data = [
+                { Name: "JBL Speaker", Price: 4000.55, Photo: "../Images/JBL Speaker.png"},
+                { Name: "Nike Casuals", Price: 3500.60, Photo: "../Images/Nike Casual.png"},
+                { Name: "Earpods", Price: 5500.00, Photo: "../Images/earpons.png"},
+                { Name: "Lee Boot", Price: 4800.55, Photo: "../Images/Lee Cooper.png"},
+                { Name: "Shirt", Price: 1500.00, Photo: "../Images/Shirt.png"},
+                { Name: "Jeans", Price: 1900.55, Photo: "../Images/jeans.png"},
+            ];
+            function DisplayImage(index)
+            {
+                document.getElementById("lblName").innerHTML = data[index].Name;
+                document.getElementById("lblPrice").innerHTML = data[index].Price;
+                document.getElementById("pic").src = data[index].Photo
+            }
+
+            var count = 0;
+            function SlideShow()
+            {
+                count++;
+                DisplayImage(count)
+                document.getElementById("range").value = count;
+            }
+
+            var play;
+            function PlayClick()
+            {
+                play = setInterval(SlideShow, 5000);
+                document.getElementById("lblStatus").innerHTML = "[Slide Show - Started]";
+            }
+
+            function PauseClick()
+            {
+                clearInterval(play);
+                document.getElementById("lblStatus").innerHTML = "[Slide Show - Paused]";
+            }
+
+            function bodyload()
+            {
+                DisplayImage(0);
+            }
+
+
+            function SliderChange()
+            {
+                var sliderValue = document.getElementById("range").value;
+                DisplayImage(sliderValue);
+            }
+        </script>
+    </head>
+    <body class="container-fluid" onload="bodyload()">
+        <div class="card mt-3">
+            <div class="card-header text-center bg-info">
+                <h2 id="lblName"></h2>
+                <p id="lblStatus"></p>
+            </div>
+            <div class="card-body text-center bg-success">
+                <img width="50%" height="300" id="pic">
+                <h4 id="lblPrice"></h4> &#8377;   
+            </div>
+            <div class="card-footer text-center bg-dark">
+                <button onclick="PlayClick()"><span class="fa fa-play"></span></button>
+                <button onclick="PauseClick()"><span class="fa fa-pause"></span></button>
+            </div>
+            <div class="text-center bg-primary">
+                <input onchange="SliderChange()" type="range" id="range" value="0" min="0" max="5">
+            </div>
+        </div>
+
+    </body>
+</html>

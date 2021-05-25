@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Login Page</title>
+        <script>
+            var data = [
+                {Username: 'subhash', Password: 'subhash12'},
+                {Username: 'david', Password: 'david1'},
+                {Username: 'john', Password: 'john2'}
+            ];
+            function LoginClick()
+            {
+                var txtName = document.getElementById("txtName").valu;
+                var txtPwd = document.getElementById("txtPwd").value;
+                for(var user of data)
+                {
+                    if(user.UserName==txtName && user.Password==txtPwd)
+                    {
+                        document.write("Login Success...");
+                    } else {
+                        document.getElementById("msg").innerHTML = "Invalid Password".fontcolor('red');
+                    }
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <h2>User Login</h2>
+        <dl>
+            <dt>User Name</dt>
+            <dd>
+                <input type="text" id="txtName">
+            </dd>
+            <dt>Password</dt>
+            <dd>
+                <input type="password" id="txtPwd">
+            </dd>
+        </dl>
+        <button onclick="LoginClick()">Login</button>
+        <h1 id="msg" align="center"></h1>
+    </body>
+</html>

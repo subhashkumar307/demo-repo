@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>List Item</title>
+        <script src="../node_modules/jquery/dist/jquery.js"></script>
+        <script>
+            $(function(){
+                var categories = ["All", "Electronics", "Footware", "Fashion"]
+                $.each(categories, function(property, value){
+                    $(`<li>${value}</li>`).appendTo("ul");
+                    $("select").append(`<option>${value}</option>`);
+                })
+                $("select").change(function(){
+                    $("p").html($("select").val());
+                })
+            })
+        </script>
+    </head>
+    <body>
+        <ul>
+
+        </ul>
+        <br><br>
+        <select>
+            
+        </select>
+        
+    </body>
+</html>

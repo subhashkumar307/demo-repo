@@ -1,0 +1,2 @@
+Ajax Help Document.
+It is an official Help document for jquery Ajax.

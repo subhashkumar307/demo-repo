@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Image Events</title>
+        <script>
+            function GetPosition(e)
+            {
+                var pic = document.getElementById("pic");
+                pic.style.position = "fixed";
+                pic.style.left = e.clientX + "px";
+                pic.style.top = e.clientY + "px";
+            }
+        </script>
+    </head>
+    <body onmousemove="GetPosition(event)">
+        <div style="height: 1000px;">
+
+        </div>
+        <img id="pic" src="../Images/flag.gif" width="200" height="200">
+
+    </body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Drop-down Menu design </title>
+        <link rel="stylesheet" href="Fonts/css/all.css">
+        <style>
+            ul
+            {
+                padding: 0px;
+                margin: 0px;
+                box-sizing: border-box;
+
+            }
+            body
+            {
+                background-image: url(Images/laptop.png);
+                background-size: 100%;
+                background-position: center;
+                font-family: sans-serif;
+            }
+            .menu-bar
+            {
+                background: rgb(0, 100, 0);
+                text-align: center;
+            }
+            .menu-bar ul
+            {
+                display: inline-flex;
+                list-style: none;
+                color: white;
+            }
+            .menu-bar ul li
+            {
+                width: 100px;
+                margin: 15px;
+                padding: 15px;
+
+            }
+            .menu-bar ul li a
+            {
+                text-decoration: none;
+                color: white;
+            }
+            .active,  .menu-bar ul li:hover
+            {
+                background: violet;
+                border-radius: 3px;
+            }
+            .menu-bar .fa
+            {
+                margin-right: 8px;
+            }
+            .sub-menu-1
+            {
+                display: none;
+            }
+            .menu-bar ul li:hover .sub-menu-1
+            {
+                display: block;
+                position: absolute;
+                background: rgb(100, 0, 17);
+                margin-top: 15px;
+                margin-left: -15px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="menu-bar">
+           <ul>
+              <li class="active"><a href="#" class="fa fa-home">Home</a></li>
+              <li><a href="#" class="fa fa-user">About Us</a></li>
+              <div class="sub-menu-1">
+                  <ul>
+                      <li><a href="#">Mission</a></li>
+                      <li><a href="#">Vision</a></li>
+                      <li><a href="#">Team</a></li>
+                  </ul>
+              </div>
+              <li><a href="#" class="fa fa-clone">Services</a></li>
+              <li><a href="#" class="fa fa-users">Clients</a></li>
+              <li><a href="#" class="fa fa-angellist">Investers</a></li>
+              <li><a href="#" class="fa fa-inr">Pricing</a></li>
+              <li><a href="#" class="fa fa-edit">Training</a></li>
+              <li><a href="#" class="fa fa-phone">Contact</a></li>
+           </ul>
+        </div>
+    </body>
+</html>
