@@ -1,6 +1,25 @@
-dt{
+/*dt{
     background-color: rgb(216, 27, 27);
     width: 300px;
     color: white;
 
 }
+
+.img-fluid
+{
+    width: 200px;
+    height: 200px;
+    border: 2px solid;
+}
+
+#container
+{
+    width: 400px;
+    height: 300px;
+    padding: 20px;
+    border: 4px solid;
+}
+.container
+{
+    border: green 2px solid;
+}*/
