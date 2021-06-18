@@ -12,6 +12,10 @@
     "@babel/standalone": "^7.14.3",
     "bootstrap": "^4.6.0",
     "dom": "0.0.3",
+    "express": "^4.17.1",
+    "http": "0.0.1-security",
+    "http-status-codes": "^2.1.4",
+    "jasmine-core": "^3.7.1",
     "jquery": "^3.6.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"

@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="/node_modules/jquery/dist/jquery.js"></script>
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <link rel="stylesheet" href="/Fonts/css/all.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Document of Covid Website</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg " style="background-color: rgb(7, 7, 78); height: 50px;">
+        <button class="navbar-toggle" data-toggle="collapse" data-target="#navitems">
+            <span class="navbar-toggle-icon"></span>
+        </button>
+        <div class="topPart">
+            <span class="flagcls">
+                <img src="../Images/emblem_white.png" width="13" height="20" alt="emblem" class="logol"
+                    style="background-color: blue;">
+            </span>
+            <span>
+                <a href="https://www.india.gov.in/" target="_blank" class="text-white">
+                    Ministry of Health and Family Welfare
+                </a>
+            </span>
+        </div>
+
+        <div id="navitems" class="collapse navbar-collapse justify-content-between">
+            <ul class="navbar-nav">
+                <li class="department">
+                    <a data-toggle="tooltip" class="text-white " title="FAQS_ON_CoWIN_FOR_CITIZENS" href="/faq">
+                        <span class="icon-icon-question fas fa-thumbs-up"
+                            style="font-size: 16px; margin-left: 250px;"></span>FAQ</a>
+                </li>
+                <li class="department m-0 primary-color">
+                    <a href="https://dashboard.cowin.gov.in" class="text-white" target="_blank">
+                        <span class="icon-dashboard fas fa-columns"
+                            style="font-size: 14px; margin-left: 25px;"></span>Dashboard </a>
+                </li>
+                <li class="department m-0 primary-color mblink">
+                    <a href="https://apisetu.gov.in/public/marketplace/api/cowin" class="text-white" target="_blank">
+                        <span class="icon-dashboard far fa-list-alt"
+                            style="font-size: 14px; margin-left: 25px;"></span>Open APIs </a>
+                </li>
+                <li class="department m-0 primary-color mblink">
+                    <a target="_blank" href="https://admin.cowin.gov.in" class="text-white">
+                        <span class="icon-login fas fa-box" style="margin-left: 25px;"></span> Department Login </a>
+                </li>
+                <li class="department m-0 mblink">
+                    <a target="_blank" href="https://app.cowin.gov.in" class="text-white">
+                        <span class="icon-syringe fas fa-wine-bottle" style="margin-left: 25px;"></span> Vaccinator </a>
+                </li>
+                <li class="department m-0">
+                    <a href="https://verify.cowin.gov.in/" target="_blank" class="text-white">
+                        <span class="icon-document-file-c fas fa-stamp" style="margin-left: 25px;"></span> Verify
+                        Certificate </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- <div class="logoArea">
+        <div class="logo">
+            <img src="../Images/covid19logo.jpg" width="125px" height="36px">
+        </div>
+        <span class="mobileregisterbtn">
+            <a href="https://selfregistration.cowin.gov.in/" target="_blank" class="yellowbtn">Register/ Sign In yourself</a>
+        </span>
+    </div> -->
+<!--Help Part-->
+    <div class="container mt-4">
+        <div class="row d-flex justify-content-center">
+            <div class="col-12 heading-title text-center">
+                <h3>Helpline</h3>
+            </div>
+            <div class="col-12 col-sm-6 col-md-auto">
+                <div class="helpline">
+                    <span class="icon-helpline"></span>
+                    <div class="right-section">
+                        <p style="font-weight: bolder;">Number</p><a href="tel:911123978046">91-11-23978046</a>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-auto">
+                <div class="helpline">
+                    <span class="icon-ministry-helpline"></span>
+                    <div class="right-section">
+                        <p style="font-weight: bolder;">Health Ministry</p><a href="tel:1075"> 1075</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-auto">
+                <div class="helpline">
+                    <span class="icon-children"></span>
+                    <div class="right-section">
+                        <p style="font-weight: bolder;">Child</p><a href="tel:1098"> 1098</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-auto">
+                <div class="helpline">
+                    <span class="icon-mental-health"></span>
+                    <div class="right-section">
+                        <p style="font-weight: bolder;">Mental Health</p><a href="tel:08046110007"> 08046110007</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-auto">
+                <div class="helpline">
+                    <span class="icon-citizen"></span>
+                    <div class="right-section">
+                        <p style="font-weight: bolder;">Senior Citizens</p><a href="tel:14567"> 14567</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!--Carousel Banner-->
+    <div id="banner" class="carousel slide mt-3 carousel-fade" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active" data-interval="2000">
+                <img src="../Images/covid banner1.jpg" class="d-block w-100" style="height: 400px;"
+                    style="opacity: 0.5;">
+            </div>
+            <div class="carousel-item" data-interval="3000">
+                <img src="../Images/covid banner2.jpg" class="d-block w-100" style="height: 400px;"
+                    style="opacity: 0.5;">
+            </div>
+            <div class="carousel-item" data-interval="2000">
+                <img src="../Images/covid banner3.jpg" class="d-block w-100" style="height: 400px;"
+                    style="opacity: 0.5;">
+            </div>
+            <div class="carousel-item">
+                <img src="../Images/covid banner6.jpg" class="d-block w-100" style="height: 400px;"
+                    style="opacity: 0.5;">
+            </div>
+            <div class="carousel-item">
+                <img src="../Images/covid banner5.jpg" class="d-block w-100" style="height: 400px;"
+                    style="opacity: 0.5;">
+            </div>
+        </div>
+ <!--Controls-->
+        <a href="#banner" data-slide="prev" class="carousel-control-prev">
+            <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a href="#banner" data-slide="next" class="carousel-control-next">
+            <span class="carousel-control-next-icon"></span>
+        </a>
+<!--Indicators-->
+        <ul class="carousel-indicators">
+            <li class="active" data-target="#banner" data-slide-to="0"></li>
+            <li data-target="#banner" data-slide-to="1"></li>
+            <li data-target="#banner" data-slide-to="2"></li>
+            <li data-target="#banner" data-slide-to="3"></li>
+            <li data-target="#banner" data-slide-to="4"></li>
+        </ul>
+    </div>
+<!-- Search of pin and States and District -->
+    <div class="container mt-3" style="font-family: sans-serif; font-weight: bolder;">
+        <div class="headerpart text-center">
+            <h3> Check your nearest vaccination center and slots availability </h3>
+        </div>
+        <div class="container">
+                <div class="form-group">
+                    <label>Search by Pin</label>
+                    <input class="form-control" id="pin" type="number" maxlength="6" minlength="6" placeholder="Enter Pin" name="pin">
+                </div>
+                <table class="table" id="session">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>18+</th>
+                            <th>45+</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+    
+                    </tbody>
+               </table>
+                <button type="button" id="searchbtn" class="btn btn-danger btn-block">Search by Pin</button>
+                <!-- <button type="button" id="searchbtn1" class="btn btn-danger">Search by District</button> -->
+        </div>
+        <div class="container mt-3">
+            <div class="form-group">
+                <label for="states-label">Select State :</label>
+                <select id="state-select" class="form-control"></select>
+            </div>
+    
+            <div class="form-group">
+                <label for="district-label">Select District :</label>
+                <select id="district-select" class="form-control"></select>
+            </div>
+            <button class="btn btn-danger btn-block">Search by District</button>
+            <div class="main">
+                <table border="1">
+                    <thead>
+                        <tr>
+                            <th>Place</th>
+                            <th>Free/ Paid</th>
+                            <th>Type of Vaccination</th>
+                           
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td id="place"></td>
+                            <td id="free-paid"></td>
+                            <td id="availableslots"></td>
+                            
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+
+<!--Footer Part-->
+    <div style="background-color: orange; width: 100%;">
+        <div class="row d-flex mt-1">
+            <div class="col-12 col-md-12 d-sm-block text-center">
+                <h1>How it Works</h1>
+            </div>
+        </div>
+        <div class="row m-2 mb-4">
+            <div class="col-12">
+                <div class="row">
+                    <div class="col-md-3 col-12 text-center">
+                        <div class="hiw-box">
+                            <div class="stepsimg">
+                                <img src="../Images/covid imagesvg.svg" width="200px" class="img-fluid" alt="about">
+                            </div>
+                            <div class="inner">
+                                <h3>Register Yourself </h3>
+                                <p>Register using your Mobile no. or Aadhaar no. or any other Identity docs..</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-12 text-center">
+                        <div class="hiw-box">
+                            <div class="stepsimg">
+                                <img src="../Images/covid imagesvg1.svg" width="200px" class="img-fluid" alt="about">
+                            </div>
+                            <div class="inner">
+                                <h3 >Choose Vaccine Location</h3>
+                                <p>Select your nearby Vaccine Center for vaccination</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-12 text-center">
+                        <div class="hiw-box">
+                            <div class="stepsimg">
+                                <img src="../Images/covid imagesvg2.svg" width="200px" class="img-fluid" alt="about">
+                            </div>
+                            <div class="inner">
+                                <h3>Confirm your Slot</h3>
+                                <p>Book your slot to Get Vaccine</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-12 text-center">
+                        <div class="hiw-box">
+                            <div class="stepsimg">
+                                <img src="../Images/logoimage.png" width="200px" class="img-fluid" alt="about">
+                            </div>
+                            <div class="inner">
+                                <h3>Any Question?</h3>
+                                <p>Please follow our Frequently asked questions <a href="faq">(FAQ)</a> </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-12 nopaddingclsblock">
+                        <div class="cm-link-box clearfix">
+                            <div class="manual-link">
+                                <a href="https://prod-cdn.preprod.co-vin.in/assets/pdf/User_Guide_Citizen%20registration_18+.pdf" download="" target="_blank" class="user-manual-link">Know how to book your appointment </a>
+                            </div>
+                            <div class="manual-links cm-dos-link">
+                                <a href="https://prod-cdn.preprod.co-vin.in/assets/pdf/Dos_and_Donts_for_Citizens.pdf" download="" target="_blank" class="user-manual-link">Dos and Don'ts </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!--Help Center Number-->    
+    <div class="container-fluid" style="background-color: rgb(248, 239, 248);">
+        <div class="row">
+            <div class="col-6 col-sm-6 col-md-4 col-lg-2">
+                <div class="vaccine-icon-box icon-box1">
+                    <div class="icon-image">
+                        <span class="icon-dashboard"></span>
+                    </div>
+                    <div class="vaccine-content">
+                        <h3 class="todayvalue">+<span>1012195 </span></h3>
+                        <h4> 2283.28<span> + Lakh</span></h4>
+                        <p>Tot Vaccination Doses</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-sm-6 col-md-4 col-lg-2">
+                <div class="vaccine-icon-box icon-box2">
+                    <div class="icon-image">
+                        <span class="icon-syringe"></span>
+                    </div>
+                    <div class="vaccine-content">
+                        <h3 class="todayvalue">+<span>953275 </span></h3>
+                        <h4> 1835.46<span> + Lakh</span></h4>
+                        <p>Dose-1 Vaccinations</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-sm-6 col-md-4 col-lg-2">
+                <div class="vaccine-icon-box icon-box3">
+                    <div class="icon-image">
+                        <span class="icon-vaccine"></span>
+                    </div>
+                    <div class="vaccine-content">
+                        <h3 class="todayvalue">+<span>58920 </span></h3>
+                        <h4> 447.82<span> + Lakh</span></h4>
+                        <p>Dose-2 Vaccinations</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-sm-6 col-md-4 col-lg-2">
+                <div class="vaccine-icon-box icon-box4">
+                    <div class="icon-image">
+                        <span class="icon-male"></span>
+                    </div>
+                    <div class="vaccine-content">
+                        <h3 class="todayvalue">+<span>562177 </span></h3>
+                        <h4> 987.53<span> + Lakh</span></h4>
+                        <p>Tot Vaccinated - Male</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-sm-6 col-md-4 col-lg-2">
+                <div class="vaccine-icon-box icon-box5">
+                    <div class="icon-image">
+                        <span class="icon-woman"></span>
+                        <div class="vaccine-content">
+                            <h3 class="todayvalue">+<span>449812 </span></h3>
+                            <h4> 847.62<span> + Lakh</span></h4>
+                            <p>Tot Vaccinated - Female</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-sm-6 col-md-4 col-lg-2">
+                <div class="vaccine-icon-box icon-box6">
+                    <div class="icon-image">
+                        <span class="report-icon"></span>
+                    </div>
+                    <div class="vaccine-content">
+                        <h3 class="todayvalue">+<span>7 </span></h3>
+                        <h4> 21695 </h4>
+                        <p>AEFI Reported</p>
+                    </div>
+                </div>
+            </div>
+            <div class="know-more">
+                <a target="_blank" href="https://dashboard.cowin.gov.in" class="know-more-link">View full report »</a>
+            </div>
+        </div>
+    </div>
+<!--Footer-->
+    <div class="container mb-5 mt-5">
+        <div class="row">
+            <div class="col-12">
+                <div>
+                    <h1 class="text-center">Our Partners</h1>
+                    <div class="cowin-update">
+                        <div class="certiblock">
+                            <div class="block1 argypt mt-5">
+                                <a href="https://play.google.com/store/apps/details?id=nic.goi.aarogyasetu" target="_blank">
+                                    <img src="../Images/footer1.png" class="img-fluid" alt="aarogya setu">
+                                </a>
+                            </div>
+                            <div class="block1 pldg digi-lock mt-5">
+                                <a href="https://play.google.com/store/apps/details?id=com.digilocker.android" target="_blank">
+                                    <img src="../Images/footer2.png" class="img-fluid" alt="digilocker">
+                                </a>
+                            </div>
+                            <div class="block1 pldg umang mt-2">
+                                <a href="https://web.umang.gov.in/web_new/login?redirect_to=department%3Furl%3Dcowin%2F%26dept_id%3D355%26dept_name%3DCo-WIN" target="_blank">
+                                    <img src="../Images/footer3.png" height="100px" alt="UMANG">
+                                </a>
+                            </div>
+                            <div class="block1 pldg cvin mt-2">
+                                <a href="https://digitalseva.csc.gov.in/" target="_blank">
+                                    <img src="../Images/footer4.png" height="80px" width="150px" alt="CSC" class="img-fluid">
+                                </a>
+                            </div>
+                            <div class="block1 pldg undp mt-2">
+                                <a href="#" target="_blank">
+                                    <img src="../Images/footer5.png" height="80px" alt="undp-logo">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./pin.js"></script>
+    
+</body>
+
+</html>

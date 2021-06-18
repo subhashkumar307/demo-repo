@@ -1,0 +1,64 @@
+.menu li
+{
+    display: inline;
+    font-family: sans-serif;
+    font-weight: bolder;
+    text-align: center;
+}
+.menu
+{
+    border: 2px solid black;
+    border-radius: 100px;
+    width: 40%;
+    height: 40px;
+    margin-left: 320px;
+}
+/* .text1
+{
+    background-color: blue;
+    color: white;
+    font-weight: bolder;
+} */
+.manual-link
+{
+    border: 2px solid white;
+    /* display: inline; */
+    margin-left: 300px;
+    width: 30%;
+    height: 50px;
+    font-size: 21px;
+    font-weight: bolder;
+}
+.manual-links
+{
+    border: 2px solid white;
+    display: inline; 
+    margin-left: 800px;
+    width: 15%;
+    height: 50px;
+    font-size: 21px;
+    font-weight: bolder;
+}
+a:hover
+{
+    background-color: white;
+    text-decoration: none;
+}
+.know-more
+{
+    border: 2px solid black;
+    margin-left: 500px;
+    background-color: white;
+    width: 200px;
+    height: 30px;
+    text-align: center;
+    font-weight: bolder;
+}
+.block1
+{
+    float: left;
+    width: 15%;
+    padding: 4px;
+    text-align: center;
+    margin-right: 50px;
+}
